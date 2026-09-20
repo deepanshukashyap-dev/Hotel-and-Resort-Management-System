@@ -878,6 +878,62 @@ img {
 }
 
 /* --------------------------------------------------------------------------
+   11. SPA & WELLNESS RETREAT SECTION (Contributed by Ayush Tyagi)
+   -------------------------------------------------------------------------- */
+.spa-section {
+  background-color: var(--color-white);
+}
+
+.spa-card {
+  background-color: var(--color-white);
+  border: 1px solid rgba(163, 125, 76, 0.2);
+  padding: 36px 28px;
+  text-align: center;
+  transition: var(--transition);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.spa-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 30px rgba(163, 125, 76, 0.12);
+  border-color: var(--color-accent);
+}
+
+.spa-card-icon {
+  font-size: 40px;
+  color: var(--color-accent);
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.spa-card h3 {
+  font-family: var(--font-primary);
+  font-size: 22px;
+  margin-bottom: 14px;
+}
+
+.spa-card p {
+  color: var(--color-text-muted);
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.spa-card-meta {
+  font-family: var(--font-tertiary);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  padding-top: 14px;
+  border-top: 1px dashed var(--color-border);
+}
+
+/* --------------------------------------------------------------------------
    RESPONSIVE UTILITIES & POLISH
    -------------------------------------------------------------------------- */
 @media (max-width: 991px) {
