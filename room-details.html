@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Room Details - Hotel &amp; Spa Adina. Experience luxury suites, king beds, private terraces and complimentary amenities.">
+  <title>Luxury Suite Room Details | Hotel &amp; Spa Adina</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Main Project Stylesheet (Pure CSS) -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       HEADER / NAVIGATION
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="header-logo" aria-label="Hotel &amp; Spa Adina Home">
+        <img src="assets/img/logo-white.svg" alt="Hotel &amp; Spa Adina Logo">
+      </a>
+      <nav class="main-nav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link-custom">Home</a>
+        <a href="index.html#rooms" class="nav-link-custom active">Rooms</a>
+        <a href="index.html#restaurant" class="nav-link-custom">Restaurant</a>
+        <a href="index.html#spa" class="nav-link-custom">Spa</a>
+        <a href="index.html#contact" class="nav-link-custom">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       DETAILS HERO SECTION
+       ======================================================================== -->
+  <section class="details-hero">
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <h1 class="details-hero-title">Luxury Suite Room Details</h1>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       MAIN DETAILS & SIDEBAR SECTION
+       ======================================================================== -->
+  <section class="details-content-section">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Left Main Content -->
+        <div class="col-12 col-lg-8">
+          <article class="room-details-main">
+            <h2>Luxury Suite Room</h2>
+            <p class="lead-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea placeat eos sed voluptas unde veniam eligendi a. Quaerat molestiae hic omnis temporibus quos consequuntur nam voluptatum ea accusamus, corrupti nostrum eum placeat quibusdam quis beatae quae labore earum architecto aliquid debitis.
+            </p>
+
+            <img src="assets/img/rooms/5-lg.png" alt="Panoramic view of Luxury Suite Room interior" class="room-large-img">
+
+            <p class="lead-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis accusantium sapiente quas quos explicabo, odit nostrum? Reiciendis illum dolor eos dicta. Illum vero at hic nostrum sint et quod porro.
+            </p>
+
+            <h3 class="facilities-heading">Room Amenities &amp; Facilities</h3>
+            <!-- Facilities Grid (8 items from React original) -->
+            <div class="facilities-grid">
+              <div class="facility-item">
+                <span class="facility-icon"><i class="bi bi-wifi"></i></span>
+                <span class="facility-name">Wifi</span>
+              </div>
+              <div class="facility-item">
+                <span class="facility-icon"><i class="bi bi-cup-hot"></i></span>
+                <span class="facility-name">Coffee</span>
+              </div>
+              <div class="facility-item">
+                <span class="facility-icon"><i class="bi bi-droplet"></i></span>
+                <span class="facility-name">Bath</span>
+              </div>
+              <div class="facility-item">
+                <span class="facility-icon"><i class="bi bi-p-square"></i></span>
+                <span class="facility-name">Parking Space</span>
+              </div>
+              <div class="facility-item">
+                <span class="facility-icon"><i class="bi bi-water"></i></span>
+                <span class="facility-name">Swimming Pool</span>
+              </div>
+              <div class="facility-item">
+                <span class="facility-icon"><i class="bi bi-egg-fried"></i></span>
+                <span class="facility-name">Breakfast</span>
+              </div>
+              <div class="facility-item">
+                <span class="facility-icon"><i class="bi bi-stopwatch"></i></span>
+                <span class="facility-name">GYM</span>
+              </div>
+              <div class="facility-item">
+                <span class="facility-icon"><i class="bi bi-cup-straw"></i></span>
+                <span class="facility-name">Drinks</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Right Sidebar (Reservation + Hotel Rules) -->
+        <aside class="col-12 col-lg-4">
+          <!-- Reservation Form Card -->
+          <div class="reservation-card">
+            <h3>Your Reservation</h3>
+            <form action="room-details.html" method="POST">
+              <!-- Check-In -->
+              <div class="reservation-form-group">
+                <label for="reservation-checkin">Check-in Date</label>
+                <div class="reservation-input-box">
+                  <input type="date" id="reservation-checkin" name="checkIn" value="2026-09-22" required aria-label="Reservation check-in date">
+                </div>
+              </div>
+
+              <!-- Check-Out -->
+              <div class="reservation-form-group">
+                <label for="reservation-checkout">Check-out Date</label>
+                <div class="reservation-input-box">
+                  <input type="date" id="reservation-checkout" name="checkOut" value="2026-09-25" required aria-label="Reservation check-out date">
+                </div>
+              </div>
+
+              <!-- Adults -->
+              <div class="reservation-form-group">
+                <label for="reservation-adults">Adults</label>
+                <div class="reservation-input-box">
+                  <select id="reservation-adults" name="adults" aria-label="Select reservation adults count">
+                    <option value="1">1 Adult</option>
+                    <option value="2" selected>2 Adults</option>
+                    <option value="3">3 Adults</option>
+                    <option value="4">4 Adults</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Kids -->
+              <div class="reservation-form-group mb-4">
+                <label for="reservation-kids">Kids</label>
+                <div class="reservation-input-box">
+                  <select id="reservation-kids" name="kids" aria-label="Select reservation kids count">
+                    <option value="0" selected>0 Kid (No Kid)</option>
+                    <option value="1">1 Kid</option>
+                    <option value="2">2 Kids</option>
+                    <option value="3">3 Kids</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="submit" class="btn-custom btn-custom-lg btn-accent w-100">
+                Book now for $320
+              </button>
+            </form>
+          </div>
+
+          <!-- Hotel Rules Card -->
+          <div class="hotel-rules-card">
+            <h3>Hotel Rules</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi dolores iure fugiat eligendi illo est, aperiam quasi distinctio necessitatibus suscipit nemo provident eaque voluptas earum.
+            </p>
+            <ul class="rules-list">
+              <li>
+                <span class="rules-icon"><i class="bi bi-check-lg"></i></span>
+                <span>Check-in : 3:00 PM - 9:00 PM</span>
+              </li>
+              <li>
+                <span class="rules-icon"><i class="bi bi-check-lg"></i></span>
+                <span>Check-out : 10:30 AM</span>
+              </li>
+              <li>
+                <span class="rules-icon"><i class="bi bi-check-lg"></i></span>
+                <span>No Smoking</span>
+              </li>
+              <li>
+                <span class="rules-icon"><i class="bi bi-check-lg"></i></span>
+                <span>No Pet</span>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <a href="index.html" class="footer-logo" aria-label="Hotel Adina Home">
+          <img src="assets/img/logo-white.svg" alt="Hotel &amp; Spa Adina Logo">
+        </a>
+        <div class="footer-copyright">
+          <p>&copy; 2026 Hotel &amp; Spa Adina. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
