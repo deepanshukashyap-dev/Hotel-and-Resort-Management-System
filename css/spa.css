@@ -122,3 +122,10 @@
   color: var(--color-accent);
   font-size: 20px;
 }
+
+.spa-services {
+  padding: 96px 0;
+  background-color: #faf8f5;
+  border-top: 1px solid rgba(163, 125, 76, 0.15);
+  border-bottom: 1px solid rgba(163, 125, 76, 0.15);
+}
