@@ -257,3 +257,68 @@
   width: 80%;
   max-width: 240px;
 }
+
+.spa-info-section {
+  padding: 96px 0;
+  background-color: var(--color-white);
+}
+
+.spa-info-heading {
+  font-family: var(--font-primary);
+  font-size: 28px;
+  margin-bottom: 24px;
+  color: var(--color-primary);
+}
+
+.spa-hours-box {
+  background: var(--color-white);
+  border-left: 3px solid var(--color-accent);
+  padding: 16px 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.spa-hours-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 16px;
+  font-size: 15px;
+  padding: 14px 0;
+  border-bottom: 1px dashed #e5e5e5;
+}
+
+.spa-hours-item:last-child {
+  border-bottom: none;
+}
+
+.spa-hours-item span {
+  color: var(--color-text-muted);
+}
+
+.spa-know-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.spa-know-list li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 15px;
+  margin-bottom: 16px;
+  color: var(--color-primary);
+}
+
+.spa-know-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-white);
+  border: 1px solid rgba(163, 125, 76, 0.3);
+  color: var(--color-accent);
+  font-size: 18px;
+}
