@@ -803,7 +803,82 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   9. RESPONSIVE UTILITIES & POLISH
+   10. RESTAURANT & DINING SECTION (Contributed by Ayush Tyagi)
+   -------------------------------------------------------------------------- */
+.restaurant-section {
+  background-color: #faf8f5;
+  border-top: 1px solid rgba(163, 125, 76, 0.15);
+  border-bottom: 1px solid rgba(163, 125, 76, 0.15);
+}
+
+.restaurant-content h3 {
+  font-family: var(--font-primary);
+  font-size: 30px;
+  margin-bottom: 16px;
+  color: var(--color-primary);
+}
+
+.restaurant-content p {
+  color: var(--color-text-muted);
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.dining-hours-box {
+  background: var(--color-white);
+  border-left: 3px solid var(--color-accent);
+  padding: 16px 20px;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.dining-hour-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  padding: 4px 0;
+  border-bottom: 1px dashed #eee;
+}
+
+.dining-hour-item:last-child {
+  border-bottom: none;
+}
+
+.restaurant-img-frame {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.restaurant-img-frame img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.restaurant-img-frame:hover img {
+  transform: scale(1.04);
+}
+
+.restaurant-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(10, 10, 10, 0.85);
+  color: var(--color-accent);
+  padding: 8px 18px;
+  font-family: var(--font-tertiary);
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  backdrop-filter: blur(6px);
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE UTILITIES & POLISH
    -------------------------------------------------------------------------- */
 @media (max-width: 991px) {
   .main-nav {
