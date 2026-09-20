@@ -322,3 +322,52 @@
   color: var(--color-accent);
   font-size: 18px;
 }
+
+.spa-cta {
+  position: relative;
+  padding: 110px 0;
+  background: url('../assets/img/heroSlider/1.jpg') no-repeat center center / cover;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.spa-cta-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.spa-cta-content {
+  position: relative;
+  z-index: 2;
+}
+
+.spa-cta .h2 {
+  color: var(--color-white);
+}
+
+.spa-cta-text {
+  max-width: 560px;
+  margin: 0 auto 32px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+@media (max-width: 575px) {
+  .spa-intro,
+  .spa-services,
+  .spa-menu-section,
+  .spa-packages-section,
+  .spa-info-section {
+    padding: 64px 0;
+  }
+
+  .spa-intro .h2,
+  .spa-services .h2,
+  .spa-menu-section .h2,
+  .spa-packages-section .h2,
+  .spa-cta .h2 {
+    font-size: 32px;
+  }
+}
