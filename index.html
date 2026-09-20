@@ -45,6 +45,321 @@
   </section>
 
   <!-- ========================================================================
+       FLOATING BOOKING RESERVATION BAR
+       ======================================================================== -->
+  <div class="container booking-bar-wrapper">
+    <div class="booking-bar-container">
+      <form class="booking-form" action="#rooms" method="GET">
+        <!-- Check In -->
+        <div class="booking-field">
+          <label for="check-in-date">Check In</label>
+          <div class="booking-field-input">
+            <span class="booking-field-icon"><i class="bi bi-calendar-check"></i></span>
+            <input type="date" id="check-in-date" name="checkIn" value="2026-09-22" required aria-label="Check-in date">
+          </div>
+        </div>
+
+        <!-- Check Out -->
+        <div class="booking-field">
+          <label for="check-out-date">Check Out</label>
+          <div class="booking-field-input">
+            <span class="booking-field-icon"><i class="bi bi-calendar-x"></i></span>
+            <input type="date" id="check-out-date" name="checkOut" value="2026-09-25" required aria-label="Check-out date">
+          </div>
+        </div>
+
+        <!-- Adults Dropdown -->
+        <div class="booking-field">
+          <label for="adults-count">Adults</label>
+          <div class="booking-field-input">
+            <span class="booking-field-icon"><i class="bi bi-people"></i></span>
+            <select id="adults-count" name="adults" aria-label="Select number of adults">
+              <option value="1">1 Adult</option>
+              <option value="2" selected>2 Adults</option>
+              <option value="3">3 Adults</option>
+              <option value="4">4 Adults</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Kids Dropdown -->
+        <div class="booking-field">
+          <label for="kids-count">Kids</label>
+          <div class="booking-field-input">
+            <span class="booking-field-icon"><i class="bi bi-person-hearts"></i></span>
+            <select id="kids-count" name="kids" aria-label="Select number of children">
+              <option value="0" selected>0 Kid (No Kid)</option>
+              <option value="1">1 Kid</option>
+              <option value="2">2 Kids</option>
+              <option value="3">3 Kids</option>
+              <option value="4">4 Kids</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Submit CTA -->
+        <button type="submit" class="btn-custom btn-accent booking-btn">
+          Check Now
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       ROOMS & SUITES SECTION
+       ======================================================================== -->
+  <section class="rooms-section" id="rooms">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">Hotel &amp; Spa Adina</p>
+        <h2 class="h2">Room &amp; Suites</h2>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <!-- Room 1 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="room-card">
+            <div class="room-img-wrapper">
+              <img src="assets/img/rooms/1.png" alt="Superior Room featuring queen bed and city view" loading="lazy">
+            </div>
+            <div class="room-meta-strip">
+              <div class="room-meta-content">
+                <div class="room-meta-item">
+                  <span class="room-meta-icon"><i class="bi bi-fullscreen"></i></span>
+                  <span>Size 30m²</span>
+                </div>
+                <div class="room-meta-item">
+                  <span class="room-meta-icon"><i class="bi bi-people"></i></span>
+                  <span>Max people 1</span>
+                </div>
+              </div>
+            </div>
+            <div class="room-card-body">
+              <h3 class="room-title">
+                <a href="room-details.html?id=1">Superior Room</a>
+              </h3>
+              <p class="room-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea placeat..</p>
+              <a href="room-details.html?id=1" class="btn-custom btn-custom-sm btn-dark">
+                Book now from $115
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Room 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="room-card">
+            <div class="room-img-wrapper">
+              <img src="assets/img/rooms/2.png" alt="Signature Room featuring deluxe master bedroom" loading="lazy">
+            </div>
+            <div class="room-meta-strip">
+              <div class="room-meta-content">
+                <div class="room-meta-item">
+                  <span class="room-meta-icon"><i class="bi bi-fullscreen"></i></span>
+                  <span>Size 70m²</span>
+                </div>
+                <div class="room-meta-item">
+                  <span class="room-meta-icon"><i class="bi bi-people"></i></span>
+                  <span>Max people 2</span>
+                </div>
+              </div>
+            </div>
+            <div class="room-card-body">
+              <h3 class="room-title">
+                <a href="room-details.html?id=2">Signature Room</a>
+              </h3>
+              <p class="room-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea placeat..</p>
+              <a href="room-details.html?id=2" class="btn-custom btn-custom-sm btn-dark">
+                Book now from $220
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Room 3 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="room-card">
+            <div class="room-img-wrapper">
+              <img src="assets/img/rooms/3.png" alt="Deluxe Room with modern lounge and garden terrace" loading="lazy">
+            </div>
+            <div class="room-meta-strip">
+              <div class="room-meta-content">
+                <div class="room-meta-item">
+                  <span class="room-meta-icon"><i class="bi bi-fullscreen"></i></span>
+                  <span>Size 50m²</span>
+                </div>
+                <div class="room-meta-item">
+                  <span class="room-meta-icon"><i class="bi bi-people"></i></span>
+                  <span>Max people 3</span>
+                </div>
+              </div>
+            </div>
+            <div class="room-card-body">
+              <h3 class="room-title">
+                <a href="room-details.html?id=3">Deluxe Room</a>
+              </h3>
+              <p class="room-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea placeat..</p>
+              <a href="room-details.html?id=3" class="btn-custom btn-custom-sm btn-dark">
+                Book now from $265
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Room 4 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="room-card">
+            <div class="room-img-wrapper">
+              <img src="assets/img/rooms/4.png" alt="Luxury Room with private panoramic balcony" loading="lazy">
+            </div>
+            <div class="room-meta-strip">
+              <div class="room-meta-content">
+                <div class="room-meta-item">
+                  <span class="room-meta-icon"><i class="bi bi-fullscreen"></i></span>
+                  <span>Size 50m²</span>
+                </div>
+                <div class="room-meta-item">
+                  <span class="room-meta-icon"><i class="bi bi-people"></i></span>
+                  <span>Max people 4</span>
+                </div>
+              </div>
+            </div>
+            <div class="room-card-body">
+              <h3 class="room-title">
+                <a href="room-details.html?id=4">Luxury Room</a>
+              </h3>
+              <p class="room-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea placeat..</p>
+              <a href="room-details.html?id=4" class="btn-custom btn-custom-sm btn-dark">
+                Book now from $289
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Room 5 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="room-card">
+            <div class="room-img-wrapper">
+              <img src="assets/img/rooms/5.png" alt="Luxury Suite Room with spacious living room" loading="lazy">
+            </div>
+            <div class="room-meta-strip">
+              <div class="room-meta-content">
+                <div class="room-meta-item">
+                  <span class="room-meta-icon"><i class="bi bi-fullscreen"></i></span>
+                  <span>Size 90m²</span>
+                </div>
+                <div class="room-meta-item">
+                  <span class="room-meta-icon"><i class="bi bi-people"></i></span>
+                  <span>Max people 5</span>
+                </div>
+              </div>
+            </div>
+            <div class="room-card-body">
+              <h3 class="room-title">
+                <a href="room-details.html?id=5">Luxury Suite Room</a>
+              </h3>
+              <p class="room-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea placeat..</p>
+              <a href="room-details.html?id=5" class="btn-custom btn-custom-sm btn-dark">
+                Book now from $320
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Room 6 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="room-card">
+            <div class="room-img-wrapper">
+              <img src="assets/img/rooms/6.png" alt="Deluxe Room with family suite layout" loading="lazy">
+            </div>
+            <div class="room-meta-strip">
+              <div class="room-meta-content">
+                <div class="room-meta-item">
+                  <span class="room-meta-icon"><i class="bi bi-fullscreen"></i></span>
+                  <span>Size 45m²</span>
+                </div>
+                <div class="room-meta-item">
+                  <span class="room-meta-icon"><i class="bi bi-people"></i></span>
+                  <span>Max people 6</span>
+                </div>
+              </div>
+            </div>
+            <div class="room-card-body">
+              <h3 class="room-title">
+                <a href="room-details.html?id=6">Deluxe Room</a>
+              </h3>
+              <p class="room-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea placeat..</p>
+              <a href="room-details.html?id=6" class="btn-custom btn-custom-sm btn-dark">
+                Book now from $344
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Room 7 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="room-card">
+            <div class="room-img-wrapper">
+              <img src="assets/img/rooms/7.png" alt="Luxury Room executive penthouse style" loading="lazy">
+            </div>
+            <div class="room-meta-strip">
+              <div class="room-meta-content">
+                <div class="room-meta-item">
+                  <span class="room-meta-icon"><i class="bi bi-fullscreen"></i></span>
+                  <span>Size 84m²</span>
+                </div>
+                <div class="room-meta-item">
+                  <span class="room-meta-icon"><i class="bi bi-people"></i></span>
+                  <span>Max people 7</span>
+                </div>
+              </div>
+            </div>
+            <div class="room-card-body">
+              <h3 class="room-title">
+                <a href="room-details.html?id=7">Luxury Room</a>
+              </h3>
+              <p class="room-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea placeat..</p>
+              <a href="room-details.html?id=7" class="btn-custom btn-custom-sm btn-dark">
+                Book now from $389
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Room 8 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="room-card">
+            <div class="room-img-wrapper">
+              <img src="assets/img/rooms/8.png" alt="Deluxe Room with premium hospitality layout" loading="lazy">
+            </div>
+            <div class="room-meta-strip">
+              <div class="room-meta-content">
+                <div class="room-meta-item">
+                  <span class="room-meta-icon"><i class="bi bi-fullscreen"></i></span>
+                  <span>Size 48m²</span>
+                </div>
+                <div class="room-meta-item">
+                  <span class="room-meta-icon"><i class="bi bi-people"></i></span>
+                  <span>Max people 8</span>
+                </div>
+              </div>
+            </div>
+            <div class="room-card-body">
+              <h3 class="room-title">
+                <a href="room-details.html?id=8">Deluxe Room</a>
+              </h3>
+              <p class="room-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea placeat..</p>
+              <a href="room-details.html?id=8" class="btn-custom btn-custom-sm btn-dark">
+                Book now from $499
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
        FOOTER
        ======================================================================== -->
   <footer class="site-footer">
