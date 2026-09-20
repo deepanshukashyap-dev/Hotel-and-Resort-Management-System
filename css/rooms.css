@@ -246,3 +246,51 @@
     justify-content: space-between;
   }
 }
+
+.rooms-amenities-section {
+  padding: 96px 0;
+  background-color: #faf8f5;
+  border-top: 1px solid rgba(163, 125, 76, 0.15);
+  border-bottom: 1px solid rgba(163, 125, 76, 0.15);
+}
+
+.amenity-box {
+  text-align: center;
+  height: 100%;
+  padding: 8px 6px;
+}
+
+.amenity-icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-white);
+  border: 1px solid rgba(163, 125, 76, 0.3);
+  border-radius: 50%;
+  color: var(--color-accent);
+  font-size: 28px;
+  transition: var(--transition);
+}
+
+.amenity-box:hover .amenity-icon {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+.amenity-box h4 {
+  font-family: var(--font-primary);
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+  color: var(--color-primary);
+}
+
+.amenity-box p {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
