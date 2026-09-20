@@ -1,0 +1,124 @@
+.spa-hero {
+  position: relative;
+  min-height: 460px;
+  padding-top: 72px;
+  background: url('../assets/img/heroSlider/3.jpg') no-repeat center center / cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-white);
+  overflow: hidden;
+}
+
+.spa-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  z-index: 1;
+}
+
+.spa-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 15px 40px;
+}
+
+.spa-hero-title {
+  font-family: var(--font-primary);
+  font-size: 40px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .spa-hero-title {
+    font-size: 56px;
+  }
+}
+
+@media (min-width: 992px) {
+  .spa-hero-title {
+    font-size: 66px;
+  }
+}
+
+.spa-breadcrumb {
+  font-family: var(--font-tertiary);
+  font-size: 15px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.spa-breadcrumb a:hover {
+  color: var(--color-accent);
+}
+
+.spa-breadcrumb-sep {
+  margin: 0 10px;
+  color: var(--color-accent);
+}
+
+.spa-breadcrumb span:last-child {
+  color: var(--color-accent);
+}
+
+.spa-intro {
+  padding: 96px 0;
+  background-color: var(--color-white);
+}
+
+.spa-intro-img {
+  position: relative;
+}
+
+.spa-intro-img::before {
+  content: '';
+  position: absolute;
+  top: -16px;
+  left: -16px;
+  width: 60%;
+  height: 60%;
+  border: 3px solid var(--color-accent);
+  z-index: 0;
+}
+
+.spa-intro-img img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.spa-intro-content p {
+  color: var(--color-text-muted);
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 22px;
+}
+
+.spa-feature-list {
+  list-style: none;
+  margin: 0 0 30px;
+  padding: 0;
+}
+
+.spa-feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: var(--color-primary);
+}
+
+.spa-feature-list i {
+  color: var(--color-accent);
+  font-size: 20px;
+}
