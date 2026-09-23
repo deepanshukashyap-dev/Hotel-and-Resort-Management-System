@@ -67,7 +67,7 @@
                             Please enter your details below.
                         </p>
 
-                        <form>
+                        <form id="bookingForm">
 
                             <!-- Guest Name -->
                             <div class="mb-3">
@@ -112,6 +112,7 @@
 
                                     <input type="date"
                                         class="form-control"
+                                        id="checkinDate"
                                         required>
                                 </div>
 
@@ -122,6 +123,7 @@
 
                                     <input type="date"
                                         class="form-control"
+                                        id="checkoutDate"
                                         required>
                                 </div>
 
@@ -137,11 +139,11 @@
                                         Room Type
                                     </label>
 
-                                    <select class="form-select">
+                                    <select class="form-select" id="roomType">
 
-                                        <option>Deluxe Room</option>
-                                        <option>Executive Room</option>
-                                        <option>Luxury Suite</option>
+                                        <option value="Deluxe Room" data-price="5000">Deluxe Room</option>
+                                        <option value="Executive Room" data-price="7500">Executive Room</option>
+                                        <option value="Luxury Suite" data-price="12000">Luxury Suite</option>
 
                                     </select>
 
@@ -156,6 +158,7 @@
 
                                     <input type="number"
                                         class="form-control"
+                                        id="guestCount"
                                         value="2"
                                         min="1">
 
@@ -186,60 +189,93 @@
                                     Payment Method
                                 </label>
 
-                                <select class="form-select">
+                                <select class="form-select" id="paymentMethod">
 
-                                    <option>Credit Card</option>
-                                    <option>Debit Card</option>
-                                    <option>UPI</option>
-                                    <option>Pay at Hotel</option>
+                                    <option value="Credit Card">Credit Card</option>
+                                    <option value="Debit Card">Debit Card</option>
+                                    <option value="UPI">UPI</option>
+                                    <option value="Pay at Hotel">Pay at Hotel</option>
 
                                 </select>
 
                             </div>
 
 
-                            <!-- Card Number -->
-                            <div class="mb-3">
+                            <!-- Card fields: shown only for Credit Card / Debit Card -->
+                            <div id="cardFields">
 
-                                <label class="form-label">
-                                    Card Number
-                                </label>
-
-                                <input type="text"
-                                    class="form-control"
-                                    placeholder="XXXX XXXX XXXX XXXX">
-
-                            </div>
-
-
-                            <!-- Expiry and CVV -->
-                            <div class="row">
-
-                                <div class="col-md-6 mb-3">
+                                <!-- Card Number -->
+                                <div class="mb-3">
 
                                     <label class="form-label">
-                                        Expiry Date
+                                        Card Number
                                     </label>
 
                                     <input type="text"
                                         class="form-control"
-                                        placeholder="MM/YY">
+                                        id="cardNumber"
+                                        placeholder="XXXX XXXX XXXX XXXX">
 
                                 </div>
 
 
-                                <div class="col-md-6 mb-3">
+                                <!-- Expiry and CVV -->
+                                <div class="row">
+
+                                    <div class="col-md-6 mb-3">
+
+                                        <label class="form-label">
+                                            Expiry Date
+                                        </label>
+
+                                        <input type="text"
+                                            class="form-control"
+                                            id="expiryDate"
+                                            placeholder="MM/YY">
+
+                                    </div>
+
+
+                                    <div class="col-md-6 mb-3">
+
+                                        <label class="form-label">
+                                            CVV
+                                        </label>
+
+                                        <input type="password"
+                                            class="form-control"
+                                            id="cvv"
+                                            placeholder="Enter CVV">
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- UPI field: shown only for UPI -->
+                            <div id="upiFields" style="display:none;">
+
+                                <div class="mb-3">
 
                                     <label class="form-label">
-                                        CVV
+                                        UPI ID
                                     </label>
 
-                                    <input type="password"
+                                    <input type="text"
                                         class="form-control"
-                                        placeholder="Enter CVV">
+                                        id="upiId"
+                                        placeholder="yourname@upi">
 
                                 </div>
 
+                            </div>
+
+
+                            <!-- Pay at Hotel note -->
+                            <div id="payAtHotelNote" class="section-text" style="display:none;">
+                                No payment is required now. You can pay directly at the hotel during check-in.
                             </div>
 
 
@@ -284,31 +320,37 @@
 
                         <div class="summary-item">
                             <span>Room</span>
-                            <strong>Deluxe Room</strong>
+                            <strong id="summaryRoom">Deluxe Room</strong>
                         </div>
 
 
                         <div class="summary-item">
                             <span>Guests</span>
-                            <strong>2 Guests</strong>
+                            <strong id="summaryGuests">2 Guests</strong>
                         </div>
 
 
                         <div class="summary-item">
                             <span>Check-in</span>
-                            <strong>Not selected</strong>
+                            <strong id="summaryCheckin">Not selected</strong>
                         </div>
 
 
                         <div class="summary-item">
                             <span>Check-out</span>
-                            <strong>Not selected</strong>
+                            <strong id="summaryCheckout">Not selected</strong>
+                        </div>
+
+
+                        <div class="summary-item">
+                            <span>Nights</span>
+                            <strong id="summaryNights">0</strong>
                         </div>
 
 
                         <div class="summary-item">
                             <span>Price / Night</span>
-                            <strong>₹5,000</strong>
+                            <strong id="summaryPricePerNight">₹5,000</strong>
                         </div>
 
 
@@ -319,7 +361,7 @@
 
                             <span>Total Amount</span>
 
-                            <strong>₹5,000</strong>
+                            <strong id="summaryTotal">₹5,000</strong>
 
                         </div>
 
@@ -386,6 +428,109 @@
         </p>
 
     </footer>
+
+
+    <script>
+        (function () {
+            const roomType = document.getElementById('roomType');
+            const guestCount = document.getElementById('guestCount');
+            const checkinDate = document.getElementById('checkinDate');
+            const checkoutDate = document.getElementById('checkoutDate');
+            const paymentMethod = document.getElementById('paymentMethod');
+
+            const cardFields = document.getElementById('cardFields');
+            const upiFields = document.getElementById('upiFields');
+            const payAtHotelNote = document.getElementById('payAtHotelNote');
+
+            const cardNumber = document.getElementById('cardNumber');
+            const expiryDate = document.getElementById('expiryDate');
+            const cvv = document.getElementById('cvv');
+            const upiId = document.getElementById('upiId');
+
+            const summaryRoom = document.getElementById('summaryRoom');
+            const summaryGuests = document.getElementById('summaryGuests');
+            const summaryCheckin = document.getElementById('summaryCheckin');
+            const summaryCheckout = document.getElementById('summaryCheckout');
+            const summaryNights = document.getElementById('summaryNights');
+            const summaryPricePerNight = document.getElementById('summaryPricePerNight');
+            const summaryTotal = document.getElementById('summaryTotal');
+
+            function formatRupees(amount) {
+                return '₹' + Number(amount).toLocaleString('en-IN');
+            }
+
+            function formatDateDisplay(value) {
+                if (!value) return 'Not selected';
+                const d = new Date(value + 'T00:00:00');
+                if (isNaN(d.getTime())) return 'Not selected';
+                return d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+            }
+
+            function calcNights() {
+                const inVal = checkinDate.value;
+                const outVal = checkoutDate.value;
+                if (!inVal || !outVal) return 0;
+                const inDate = new Date(inVal + 'T00:00:00');
+                const outDate = new Date(outVal + 'T00:00:00');
+                const diff = Math.round((outDate - inDate) / (1000 * 60 * 60 * 24));
+                return diff > 0 ? diff : 0;
+            }
+
+            function updateSummary() {
+                const selectedOption = roomType.options[roomType.selectedIndex];
+                const pricePerNight = Number(selectedOption.dataset.price || 0);
+                const nights = calcNights();
+                const guests = Math.max(1, Number(guestCount.value || 1));
+
+                summaryRoom.textContent = selectedOption.value;
+                summaryGuests.textContent = guests + (guests === 1 ? ' Guest' : ' Guests');
+                summaryCheckin.textContent = formatDateDisplay(checkinDate.value);
+                summaryCheckout.textContent = formatDateDisplay(checkoutDate.value);
+                summaryNights.textContent = nights;
+                summaryPricePerNight.textContent = formatRupees(pricePerNight);
+
+                const total = pricePerNight * (nights > 0 ? nights : 1);
+                summaryTotal.textContent = formatRupees(total);
+            }
+
+            function updatePaymentFields() {
+                const method = paymentMethod.value;
+
+                // Reset visibility
+                cardFields.style.display = 'none';
+                upiFields.style.display = 'none';
+                payAtHotelNote.style.display = 'none';
+
+                // Reset "required" so hidden fields never block submit
+                cardNumber.required = false;
+                expiryDate.required = false;
+                cvv.required = false;
+                upiId.required = false;
+
+                if (method === 'Credit Card' || method === 'Debit Card') {
+                    cardFields.style.display = '';
+                    cardNumber.required = true;
+                    expiryDate.required = true;
+                    cvv.required = true;
+                } else if (method === 'UPI') {
+                    upiFields.style.display = '';
+                    upiId.required = true;
+                } else if (method === 'Pay at Hotel') {
+                    payAtHotelNote.style.display = '';
+                }
+            }
+
+            roomType.addEventListener('change', updateSummary);
+            guestCount.addEventListener('input', updateSummary);
+            checkinDate.addEventListener('change', updateSummary);
+            checkoutDate.addEventListener('change', updateSummary);
+            paymentMethod.addEventListener('change', updatePaymentFields);
+
+            // Initialize on load
+            updateSummary();
+            updatePaymentFields();
+        })();
+    </script>
 
 </body>
 
