@@ -1,0 +1,332 @@
+/* Basic settings */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f6f8;
+    color: #222;
+}
+
+
+/* Header */
+
+.top-header {
+    background: #222;
+    padding: 15px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.back-btn {
+    color: white;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    padding: 8px 15px;
+    border-radius: 6px;
+}
+
+.back-btn:hover {
+    background: white;
+    color: #222;
+}
+
+
+/* Main page */
+
+.booking-page {
+    padding: 50px 0;
+    min-height: 100vh;
+}
+
+
+/* Heading */
+
+.page-title {
+    margin-bottom: 40px;
+}
+
+.page-title h1 {
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.page-title p {
+    color: #777;
+    margin: 0;
+}
+
+
+/* Cards */
+
+.booking-card,
+.summary-card,
+.info-card,
+.secure-box {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+
+/* Booking card */
+
+.booking-card {
+    padding: 30px;
+}
+
+.booking-card h3,
+.summary-card h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.booking-card h3 i,
+.summary-card h3 i {
+    margin-right: 7px;
+}
+
+.section-text {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+
+/* Form */
+
+.form-label {
+    font-weight: 500;
+    margin-bottom: 7px;
+}
+
+.form-control,
+.form-select {
+    min-height: 45px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #555;
+    box-shadow: none;
+}
+
+
+/* Payment */
+
+.payment-heading {
+    border-top: 1px solid #eee;
+    margin-top: 25px;
+    padding-top: 25px;
+}
+
+/* Dynamic payment fields (card / UPI) fade in smoothly instead of
+   just popping into view when the payment method changes */
+#cardFields,
+#upiFields {
+    animation: fadeIn 0.2s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* "Pay at Hotel" note */
+#payAtHotelNote {
+    background: #f1f6ff;
+    border: 1px solid #d6e4ff;
+    color: #2b5cb8;
+    border-radius: 7px;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    animation: fadeIn 0.2s ease-in;
+}
+
+
+/* Buttons */
+
+.button-area {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.confirm-btn {
+    background: #222;
+    color: white;
+    padding: 11px 20px;
+    border-radius: 7px;
+    flex: 1;
+}
+
+.confirm-btn:hover {
+    background: #444;
+    color: white;
+}
+
+.cancel-btn {
+    border: 1px solid #aaa;
+    padding: 11px 25px;
+    border-radius: 7px;
+}
+
+
+/* Summary */
+
+.summary-card {
+    padding: 28px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 14px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.summary-item span {
+    color: #777;
+}
+
+.summary-item strong {
+    text-align: right;
+    transition: color 0.15s ease-in;
+}
+
+.total-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+
+.total-price strong {
+    font-size: 22px;
+}
+
+
+/* Information */
+
+.info-card {
+    padding: 25px;
+    margin-top: 20px;
+}
+
+.info-card h5 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.info-card h5 i {
+    margin-right: 5px;
+}
+
+.info-card ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.info-card li {
+    color: #666;
+    margin-bottom: 9px;
+    font-size: 14px;
+}
+
+
+/* Secure box */
+
+.secure-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px;
+    margin-top: 20px;
+}
+
+.secure-box i {
+    font-size: 30px;
+}
+
+.secure-box p {
+    margin: 3px 0 0;
+    color: #777;
+    font-size: 13px;
+}
+
+
+/* Footer */
+
+.footer {
+    text-align: center;
+    background: #222;
+    color: #bbb;
+    padding: 18px 0;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .booking-page {
+        padding: 35px 15px;
+    }
+
+    .page-title h1 {
+        font-size: 30px;
+    }
+
+    .booking-card,
+    .summary-card {
+        padding: 20px;
+    }
+
+    .header-content {
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .back-btn {
+        padding: 7px 10px;
+        font-size: 14px;
+    }
+
+    .button-area {
+        flex-direction: column;
+    }
+
+    .cancel-btn {
+        text-align: center;
+    }
+
+}
